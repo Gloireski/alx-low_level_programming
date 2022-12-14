@@ -7,17 +7,9 @@
  */
 int _islower(int c)
 {
-	char t = 'a';
-	int r = 0;
-
-	while (t <= 'z')
+	if (c >= 97 && c <= 122)
 	{
-		if (c == t)
-		{
-			r = 1;
-			break;
-		}
-		c++;
+		return (1);
 	}
-	return (r);
+	return (0);
 }
