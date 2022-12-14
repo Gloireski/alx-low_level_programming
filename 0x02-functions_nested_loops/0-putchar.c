@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include<stdio.h>
 /* more headers goes there */
-#include "_putchar.c"
+#include "main.h"
 /* betty style doc for function main goes there */
 /*
  * main - Entry point
@@ -9,5 +9,14 @@
  */
 int main(void)
 {
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
+	putchar('\n');
 	return (0);
 }
