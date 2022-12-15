@@ -22,8 +22,9 @@ int main(void)
 		{
 			j = j + i;
 			i = j - i;
-			printf("%ld, ", j);
+			printf(", %ld", j);
 		}
 	}
+	printf("\n");
 	return (0);
 }
