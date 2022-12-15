@@ -5,17 +5,22 @@
  */
 int main(void)
 {
-	int n, fib = 0;
+	int n, i = 1, j = 2;
 
-	for (n = 1; n < 50; n++)
+	for (n = 1; n <= 50; n++)
 	{
-		if (n <= 2)
+		if (n == 1)
 		{
-			printf("%d, ", n);
+			printf("%ld ", i);
 		}
-		else if (n == ((n - 1) + (n - 2)))
+		else if (n == 2)
 		{
-			fib = (n- 1) + (n - 2);
+			printf("%ld, ", j);
+		}
+		else
+		{
+			j = i + 1;
+			i = j - i;
 			printf("%d, ", fib);
 		}
 	}
