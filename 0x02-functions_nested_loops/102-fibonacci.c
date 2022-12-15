@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-	int n;
+	int fib = ;
 
 	for (n = 1; n < 50; n++)
 	{
@@ -15,7 +15,8 @@ int main(void)
 		}
 		else if (n == ((n - 1) + (n - 2)))
 		{
-			printf("%d, ", n);
+			fib = (n- 1) + (n - 2);
+			printf("%d, ", fib);
 		}
 	}
 	return (0);
