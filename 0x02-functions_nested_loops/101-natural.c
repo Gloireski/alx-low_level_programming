@@ -13,7 +13,6 @@ int main(void)
 		{
 			z += n;
 		}
-		n++;
 	}
 	printf("%d", z);
 	return (0);
