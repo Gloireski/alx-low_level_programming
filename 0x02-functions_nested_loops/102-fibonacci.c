@@ -20,7 +20,7 @@ int main(void)
 		}
 		else
 		{
-			j = i + 1;
+			j = j + i;
 			i = j - i;
 			printf("%ld, ", j);
 		}
