@@ -8,17 +8,13 @@
  */
 void print_array(int *a, int n)
 {
-	int i, c = 0;
+	int i;
 
-	while (a[c] != '\0')
-	{
-		c++;
-	}
-	for (i = 0; i < c; i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("%d, ", a[i]);
 	}
-	if (i == c)
+	if (i == n)
 		printf("%d, ", a[i]);
 	_putchar('\n');
 }
