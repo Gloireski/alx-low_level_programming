@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - update a value to 98
- * @*n : memory adress of the int
+ * @n : param 
  * Return :..
  */
 
