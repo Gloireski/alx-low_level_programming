@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _puts - prints a string, followed by a new line, to stdout.
+ * print_rev - prints a string, in reverse, followed by a new line.
  * @str: param
  * Return: ...
  */
-void _puts(char *str)
+void print_rev(char *str)
 {
 	int c = 0;
-	
+
 	while (str[c] != '\0')
 	{
 		c++;
