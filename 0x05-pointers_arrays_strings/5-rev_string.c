@@ -8,12 +8,12 @@
 void rev_string(char *s)
 {
 	int c = 0, d = 0;
+	char *tmps = *s;
 
 	while (s[c] != '\0')
 	{
 		c++;
 	}
-	char tmps[c] ;
 	for (c -= 1; c >= 0; c--)
 	{
 		tmps[d] = s[c];
