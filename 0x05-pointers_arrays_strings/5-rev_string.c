@@ -20,5 +20,5 @@ void rev_string(char *s)
 		d++;
 	}
 
-	*s = *tmp;
+	*s = *tmps;
 }
