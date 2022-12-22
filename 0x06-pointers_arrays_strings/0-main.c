@@ -8,12 +8,17 @@
  */
 int main(void)
 {
-	char s1[] = "Hello";
-	char s2[] = "World!";
+	int i;
 	
-	printf("%d\n", _strcmp(s1, s2));
-	printf("%d\n", _strcmp(s2, s1));
-	printf("%d\n", _strcmp(s1, s1));
-	
-	return (0);
+	i = 0;
+	while (i < n)
+	{
+		if (i != 0)
+		{
+			printf(", ");
+		}
+		printf("%d", a[i]);
+		i++;
+	}
+	printf("\n");
 }
