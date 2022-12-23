@@ -1,30 +1,33 @@
 #include "main.h"
 
 /**
- * cap_string -  capitalizes all words of a string.
- * @str: string
+ * leet -  encodes a string into 1337.
+ * @s: string
  * Return: new string pointer
  */
 
-char *cap_string(char *str)
+char *leet(char *s)
 {
-	int c = 0, i, tspc = 13;
-	char spc[] = {32, '\t', '\n', 44, ';',
-		46, '!', '?', '"', '(', ')', '{', '}'};
+	int a = 0, b = 0, l = 5;
+	char r[5] = {'A', 'E', 'O', 'T', 'L'};
+	char n[5] = {'4', '3', '0', '7', '1'};
 
-	while (str[c])
+	while (s[a])
 	{
-		i = 0;
-		while (i < tspc)
+		b = 0;
+
+		while (b < l)
 		{
-			if ((c == 0 || str[c - 1] == spc[i]) && (str[c] >= 97 && str[c] <= 122))
+			if (s[a] == r[b] || s[a] - 32 == r[b])
 			{
-				str[c] = str[c] - 32;
+				s[a] = n[b];
 			}
-			i++;
+
+			b++;
 		}
-		c++;
+
+		a++;
 	}
 
-	return (str);
+	return (s);
 }
