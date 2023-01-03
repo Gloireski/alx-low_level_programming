@@ -10,8 +10,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int c = 0;
-	int i, j;
+	unsigned int c = 0, i = 0, j;
 
 	while (s[i] != 32)
 	{
