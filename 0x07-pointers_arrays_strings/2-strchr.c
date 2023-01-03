@@ -11,23 +11,19 @@
 
 char *_strchr(char *s, char c);
 {
-	int i = 0, j = 0;
-	char *p;
+	int i = 0, j;
 
 	while (s[i])
 	{
-		if (s[i] == c)
-			break;
 		i++;
 	}
-	if (s[i] == c)
+	for (j = 0; j <= i; j++)
 	{
-		while (s[i])
+		if (c == s[j])
 		{
-			p[j] = s[i];
-			i++;
-			j++
+			s += j;
+			return (s);
 		}
 	}
-	return (p);
+	return ('\0');
 }
