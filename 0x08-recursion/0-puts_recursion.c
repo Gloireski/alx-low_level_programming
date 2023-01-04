@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _puts - prints a string, followed by a new line, to stdout.
- * @str: param
+ * _puts_recursion - prints a string, followed by a new line.
+ * @s: param
  * Return: ...
  */
-void _puts(char *str)
+void _puts_recursion(char *s)
 {
-	for (; *str != '\0'; str++)
+	if (*s == '\0')
 	{
-		putchar(*str);
+		_putchar('\n');
 	}
-
-	putchar('\n');
+	_putchar(*s);
+	_puts_recursion(*s--);
 }
