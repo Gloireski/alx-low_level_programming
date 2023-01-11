@@ -5,12 +5,13 @@
  * main - fonction that holds the programs
  * @argc: param, number of arguments.
  * @argv: vector of strings params
- * Return: integer .
+ * Return: always 0.
  */
 
 int main(int argc, char *argv[])
 {
-	void (argc);
-	printf("%s \n", argv[0]);
+	(void) argc;
+	printf("%s\n", argv[0]);
+
 	return (0);
 }
