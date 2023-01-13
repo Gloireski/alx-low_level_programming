@@ -15,19 +15,17 @@ int main(int argc, char *argv[])
 
 	if (argc < 2)
 	{
-		_putchar("Error");
-		_putchar('\n');
+		printf("Error\n");
 		exit(98);
 	}
 	for (i = 1; i < argc; i++)
 	{
 		if (!isdigit(argv[i]))
 		{
-			_putchar("Error");
-			_putchar('\n');
+			printf("Error\n");
 			exit(98);
 		}
-		s = s * itoa(argv[i]);
+		s = s * atoi(argv[i]);
 	}
 	_putchar('0' + s);
 	_putchar('\n');
