@@ -1,5 +1,5 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef _HEADER_
+#define _HEADER_
 
 /**
  * struct dog - struct new type.
@@ -18,5 +18,8 @@ struct dog
 /**
  * dog_t - Typedef for unsigned int
  */
+typedef struct dog dog_t;
 
-#endif /* DOG_H */
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
+#endif
