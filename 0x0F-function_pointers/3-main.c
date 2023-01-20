@@ -9,6 +9,7 @@
   *
   * Return: ...
   */
+
 int main(int argc, char *argv[])
 {
 	int (*oprt)(int, int);
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
+	
 	oprt = get_op_func(argv[2]);
 
 	if (!oprt)
