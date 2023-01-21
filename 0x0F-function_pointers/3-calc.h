@@ -1,11 +1,11 @@
 #ifndef _HEADER_
 #define _HEADER_
 /**
- * struct op - Struct op
- *
- * @op: The operator
- * @f: The function associated
+ *struct op - ..
+ * @op: ...
+ * @f: ...
  */
+
 typedef struct op
 {
 	char *op;
