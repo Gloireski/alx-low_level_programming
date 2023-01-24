@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <varargs.h>
 
 /**
  * sum_them_all - sum of args
@@ -16,10 +14,9 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 	va_start(ap, n);
-	i = n;
-	while (i)
-	{	i = va_arg(ap, unsigned int);
-		s += i;
+	while (i < n)
+	{	s += va_arg(ap, unsigned int);
+		i++;
 	}
 	va_end(ap);
 
