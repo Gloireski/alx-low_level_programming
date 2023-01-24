@@ -10,7 +10,7 @@ void print_all(const char * const format, ...);
 {
 	unsigned int i = 0, j = 0;
 	va_list args;
-	char *separator "";
+	char *separator = "";
 	f_dt form_types[] = {
 		{ "c", print_char },
 		{ "i", print_integer },
