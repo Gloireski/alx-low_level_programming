@@ -13,28 +13,84 @@ void print_all(const char * const format, ...);
 	char *separator "";
 	f_dt form_types[] = {
 		{ "c", print_char },
-		{ "i", print_int },
+		{ "i", print_integer },
 		{ "f", print_float },
 		{ "s", print_char_ptr }
 	};
 
 
+	va_start(args, format);
 
-	if (n > 0)
+	while (format != NULL && format[i])
 	{
-		va_start(ap, n);
-		while (i < n)
+		j = 0;
+		while (j < 4)
 		{
-			string = va_arg(ap, char*);
-			if (string == NULL)
-				printf("(nil)");
-			else
-				printf("%s", string);
-			if (i != n - 1 && separator != NULL)
-				printf("%s", separator);
-			i++;
+			if (format[i] == *form_types[j].identifier)
+			{
+				form_types[j].f(separator, args);
+				separator = ", ";
+			}
+			j++;
 		}
-		va_end(ap);
+		i++;
 	}
+	va_end(ap);
 	printf("\n");
+}
+
+/**
+  * print_char - Prints a character of char type
+  * @separator: The separator of the character
+  * @args: A list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_char(char *separator, va_list args)
+{
+	printf("%s%c", separator, va_arg(args, double));
+}
+
+/**
+  * print_integer - Prints a character of integer type
+  * @separator: The separator of the character
+  * @args: A list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_integer(char *separator, va_list args)
+{
+	printf("%s%i", separator, va_arg(args, double));
+}
+
+/**
+  * print_float - Prints a character of float type
+  * @separator: The separator of the character
+  * @args: A list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_float(char *separator, va_list args)
+{
+	printf("%s%f", separator, va_arg(args, double));
+}
+
+/**
+  * print_char_ptr - Prints the content of pointer to char type
+  * @separator: The separator of the character
+  * @args: A list of variadic arguments
+  *
+  * Return: Nothing
+  */
+void print_char_ptr(char *separator, va_list args)
+{
+	char *arg = va_arg(args, char *);
+
+	if (arg == NULL)
+	{
+		printf("%s%s", separator, "(nil)");
+		return;
+	}
+
+	printf("%s%s", separator, arg);
 }
