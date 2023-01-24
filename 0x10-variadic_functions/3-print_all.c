@@ -6,11 +6,12 @@
  * Return: ...
  */
 
-void print_all(const char * const format, ...);
+void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, j = 0;
 	va_list args;
 	char *separator = "";
+
 	f_dt form_types[] = {
 		{ "c", print_char },
 		{ "i", print_integer },
@@ -35,7 +36,7 @@ void print_all(const char * const format, ...);
 		}
 		i++;
 	}
-	va_end(ap);
+	va_end(args);
 	printf("\n");
 }
 
@@ -48,7 +49,7 @@ void print_all(const char * const format, ...);
   */
 void print_char(char *separator, va_list args)
 {
-	printf("%s%c", separator, va_arg(args, double));
+	printf("%s%c", separator, va_arg(args, int));
 }
 
 /**
@@ -60,7 +61,7 @@ void print_char(char *separator, va_list args)
   */
 void print_integer(char *separator, va_list args)
 {
-	printf("%s%i", separator, va_arg(args, double));
+	printf("%s%i", separator, va_arg(args, int));
 }
 
 /**
