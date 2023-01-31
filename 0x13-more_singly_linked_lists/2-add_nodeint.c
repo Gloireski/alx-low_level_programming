@@ -3,24 +3,24 @@
 #include "lists.h"
 
 /**
-  * add_node - Adds a new node at the beginning of a list
+  * add_nodeint - Adds a new node at the beginning of a list
   * @head: The original linked list
-  * @str: The string to add to the node
+  * @n: The integer to add to the node
   *
   * Return: The address of the new list or NULL if it failed
   */
-list_t *add_node(list_t **head, const char *str)
-{
-	list_t *temp;
 
-	if (head != NULL && str != NULL)
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *temp;
+
+	if (head != NULL)
 	{
-		temp = malloc(sizeof(list_t));
+		temp = malloc(sizeof(listint_t));
 		if (temp == NULL)
 			return (NULL);
 
-		temp->str = strdup(str);
-		temp->len = _strlen(str);
+		temp->n = n;
 		temp->next = *head;
 
 		*head = temp;
