@@ -3,11 +3,12 @@
 #include "lists.h"
 
 /**
-  * print_list - Prints all elements of a list
+  * print_listint - Prints all elements of a list
   * @h: A linked list
   *
   * Return: The number of nodes
   */
+
 size_t print_listint(const listint_t *h)
 {
 	size_t count = 0;

@@ -2,8 +2,8 @@
 #define _LINKED_LIST
 
 /**
- * struct listint_t - singly linked list
- * @len: length of the string
+ * struct listint_s - singly linked list
+ * @n: length of the string
  * @next: points to the next node
  *
  * Description: singly linked list node structure
