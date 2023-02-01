@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
-  * free_listint - Frees a linked list.
+  * free_listint2 - Frees a linked list.
   * @head: The pointer to the first node of linked list
   *
   * Return: Nothing
