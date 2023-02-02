@@ -13,15 +13,25 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int c = 0;
+	listint_t *temp;
 
-	if (head)
+	if (*head)
 	{
-		while (head)
+		while (*head && c != idx)
 		{
-			sum += head->n;
-			head = head->next;
+			*head = (*head)->next;
+			c++;
 		}
+		if (c == idx)
+		{
+			temp = malloc(sizeof(listint_t));
+			temp->n = n;
+			temp->next = *head;
+			*head = temp;
+		}
+		return (*head);
 	}
-	return (sum);
+	else
+		return (NULL);
 }
 
