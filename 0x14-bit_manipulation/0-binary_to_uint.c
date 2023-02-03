@@ -33,7 +33,7 @@ unsigned int binary_to_uint(const char *b)
  * Return: lenght of s
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int c = 0;
 
