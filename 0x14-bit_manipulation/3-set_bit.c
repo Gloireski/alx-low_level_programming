@@ -11,24 +11,8 @@
   */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int c = 0;
-
-	if (n == NULL)
+	if (index > sizeof(unsigned long int) * 8)
 		return (-1);
-	if (index > *n)
-		return (-1);
-	while (*n)
-	{
-		if (c == index)
-		{
-			if (!(*n & 1))
-				*n = 1;
-		}
-		*n = (*n) >> 1;
-		c++;
-	}
 
-	if (index > c && index < 63)
-		return (0);
-	return (-1);
+	return ((*n |= 1 << index) ? 1 : -1);
 }
