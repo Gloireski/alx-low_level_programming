@@ -14,16 +14,12 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int c = 0;
 	int b;
 
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
+	if (index > n)
+		return (-1);
 	while (c != index)
 	{
 		if (n < 1)
-			return;
+			break;
 		n = n >> 1;
 		c++;
 	}
