@@ -10,18 +10,17 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, readed;
+	int fd;
 
-	size_t  = malloc(sizeof(text_content));
+	int nbytes = sizeof(text_content);
 
 	if (filename == NULL)
 		return (-1);
 	fd = open(filename, O_WRONLY, 600);
 	if (fd == -1)
 		return (-1);
-	write(fd, text_content, size_t);
+	write(fd, text_content, nbytes);
 
-	free(size_t);
 	close(fd);
 	return (1);
 }
