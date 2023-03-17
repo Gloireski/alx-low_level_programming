@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -12,23 +13,38 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	int sum = 0;
 	unsigned int c = 0;
+	dlistint_t *new = NULL, *tmp = NULL;
 
-	if (head == NULL)
-		return (0);
-	while (head)
-	{
-		sum = sum + head->n;
-		head = head->next;
-	}
-	while (head && index != c)
-	{
-		head = head->next;
-		c++;
-	}
-	if (index == c && head)
-		return (head);
-	else
+	if (h == NULL)
 		return (NULL);
+	if (idx == 0)
+	{
+		return (add_dnodeint(h, n));
+	}
+	tmp = *h;
+	while (tmp && idx != c)
+	{
+		tmp = tmp->next;
+		++c;
+	}
+	if (tmp->next == NULL)
+	{
+		return (add_dnodeint_end(h, n));
+	}
+	if (idx > c)
+		return (NULL);
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+	if (idx == c)
+	{
+		new->n = n;
+		new->prev = tmp->prev;
+		new->next = tmp;
+		tmp->prev = new;
+		tmp = new;
+		tmp->prev->next = new;
+	}
+	return (new);
 }
