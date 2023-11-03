@@ -7,7 +7,7 @@
  * @key: is the key, can not be an empty string
  * @value: is the value associated with the key, not empt, can be dup
  *
- * Return: 1 if it succeeded, 0 otherwise
+ * Return: 1 if it succeeded, 0 otherwise.
  */
 
 
