@@ -30,6 +30,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 
 	while (idx < size)
-		table->array[idx++] = NULL;
+	{
+		table->array[idx] = NULL;
+		idx++;
+	}
 	return (table);
 }
